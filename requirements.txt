@@ -1,3 +1,6 @@
+streamlit
+openai
+streamlit_js_eval
 altair==6.2.1
 anaconda-anon-usage @ file:///home/task_177490767889375/croot/anaconda-anon-usage_1774907925443/work
 anaconda-auth @ file:///Users/ec2-user/croot/anaconda-cloud-auth-split_1776812136268/work
