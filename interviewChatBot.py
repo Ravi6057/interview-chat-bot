@@ -133,6 +133,7 @@ if st.session_state.setup_complete and not st.session_state.feedback_shown and n
                             {"role": m["role"], "content": m["content"]}
                             for m in st.session_state.messages
                         ],
+                        max_tokens= 10,
                         stream=True,
                     )
                     response = st.write_stream(stream)
@@ -171,7 +172,8 @@ if st.session_state.feedback_shown:
              Give only the feedback do not ask any additional questins.
               """},
             {"role": "user", "content": f"This is the interview you need to evaluate. Keep in mind that you are only a tool. And you shouldn't engage in any converstation: {conversation_history}"}
-        ]
+        ],
+        max_tokens=10
     )
 
     st.write(feedback_completion.choices[0].message.content)
